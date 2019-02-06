@@ -1,0 +1,246 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Home | MovieSplash</title>
+        <link rel="stylesheet" href="Navigation.css"/>
+        <link rel="stylesheet" href="home.css"/>
+        
+        <script type="text/javascript">
+           
+            
+            //function for changong given image at constont time
+            var a=0;
+            function changeNow(){
+              var image=document.getElementById('changeimg');
+              if(a==0){
+                    image.src='img2.jpg';
+                    image.style.height="500px";
+                    
+                  
+                     a++;
+                   }
+                else if(a==1){
+                    image.src='first12.jpg';
+                    image.style.height="500px";
+                    a++;
+                }
+                else if(a==2){
+                         image.src='second1.jpg';
+                    image.style.height="500px";
+                    a=0;
+
+                    }
+            }
+            
+            //time setter for changong image 
+            function change(){
+                setInterval('changeNow()',3000);
+            }
+            
+            //validation for form
+               var rating=0;
+               var access=true;
+            function validate(){
+                var name=document.getElementById('name').value;  
+                var comment=document.getElementById('textarea').value;
+                //validation for name
+                var mail=document.getElementById('email').value;
+                if(name.length==0){
+                    alert("Please...fill in the name");
+                   access=false;
+                }
+                //mail validation
+                if (!(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(form.email.value))) {
+                     alert("Please...fill in the email");
+                    access=false;
+                }
+                
+                //validation for comment
+                if(comment.length==0){
+                     alert("Please...Write a Comment");
+                    access=false;
+                    }
+                if(rating==1 && access==true){
+                    alert("Name :"+name+"\n"+"Rating :Very Bad(1)"+"\n"+"Comment  :"+comment+"\n"+"E-mail"+mail);
+                     
+                     }
+                
+                if(rating==2 && access==true){
+                    alert("Name :"+name+"\n"+"Rating : Bad(2)"+"\n"+"Comment :"+comment+"\n"+"E-mail"+mail);
+                     
+                     }
+                 if(rating==3 && access==true){
+                    alert("Name :"+name+"\n"+"Rating :Ok(3)"+"\n"+"Comment :"+comment+"\n"+"E-mail"+mail);
+                     
+                     }
+                 if(rating==4 && access==true){
+                    alert("Name :"+name+"\n"+"Rating :good(4)"+"\n"+"Comment :"+comment+"\n"+"E-mail :"+mail);
+                     
+                     }
+                if(rating==5 && access==true){
+                    alert("Name :"+name+"\n"+"rating :Very good(5)"+"\n"+"comment :"+comment+"\n"+mail);
+                     
+                     }
+ 
+                
+            }
+            
+             //Function used for figuring the scroll position
+            window.onscroll=function(){
+              //  console.log(document.body.scrollTop)
+             //console.log(document.documentElement.scrollTop)
+              if(document.body.scrollTop > 50 || document.documentElement.scrollTop >50) {
+               document.getElementById("nav").style.display = "block";
+                  }
+                else{
+                    document.getElementById("nav").style.display = "none"; 
+                    
+                }
+            }
+            
+            function f(num){
+                    var x=0; 
+
+                if(num==5)
+                    {
+             document.getElementById("rate_1").style.backgroundColor="white";
+                        x++;
+             document.getElementById("rate_2").style.backgroundColor="white";
+                         x++;
+              document.getElementById("rate_3").style.backgroundColor="white";
+                         x++;
+             document.getElementById("rate_4").style.backgroundColor="white";
+                         x++;
+              document.getElementById("rate_5").style.backgroundColor="white";
+                         x++;
+                    }
+                if(num==4)
+                    {
+             document.getElementById("rate_1").style.backgroundColor="white";
+                        x++;
+             document.getElementById("rate_2").style.backgroundColor="white";
+                         x++;
+              document.getElementById("rate_3").style.backgroundColor="white";
+                         x++;
+              document.getElementById("rate_4").style.backgroundColor="white";
+                         x++;
+        document.getElementById("rate_5").style.backgroundColor="transparent";    
+             
+                    }
+                if(num==3)
+                    {
+         document.getElementById("rate_1").style.backgroundColor="white";
+                         x++;
+         document.getElementById("rate_2").style.backgroundColor="white";
+                         x++;
+         document.getElementById("rate_3").style.backgroundColor="white";
+                         x++;
+         document.getElementById("rate_4").style.backgroundColor="transparent";
+         document.getElementById("rate_5").style.backgroundColor="transparent";            
+            
+               }
+                  if(num==2)
+                    {
+         document.getElementById("rate_1").style.backgroundColor="white";
+                         x++;
+         document.getElementById("rate_2").style.backgroundColor="white";
+                         x++;
+         document.getElementById("rate_3").style.backgroundColor="transparent";
+         document.getElementById("rate_4").style.backgroundColor="transparent";
+         document.getElementById("rate_5").style.backgroundColor="transparent";   
+             
+               }
+                
+                  if(num==1)
+                    {
+         document.getElementById("rate_1").style.backgroundColor="white";
+                         x++;
+         document.getElementById("rate_2").style.backgroundColor="transparent";
+         document.getElementById("rate_3").style.backgroundColor="transparent";
+         document.getElementById("rate_4").style.backgroundColor="transparent";
+         document.getElementById("rate_5").style.backgroundColor="transparent";   
+             
+               }
+                
+               rating=x;
+            }
+            
+            
+           
+          
+    </script>
+</head>
+
+<body>
+     <!--Plz think something creative to add for the yellow and pink parts,snap and send on the group if you have a good one-->
+    <div class="container" id="sss">
+        <!--Add All your codes inside the div tag which has the container class-->
+        <div id="thelogo">
+            <!--the yellow area-->
+            
+            
+          <nav id="navigation">
+              <ul id="c">
+	         <li class="d"><a><img src="MovieStash.png" id="mylogo" alt="MovieStash"/></a></li>
+             <li class="b"><a>Now Screnning</a></li>
+	        <li class="b"><a>Buy Now</a></li>
+	         <li class="b"><a>Quiz</a></li>
+             <li class="b"><a>About</a></li>
+              
+           </ul>
+         </nav>
+            <nav id="nav">
+              <ul id="c">
+             <li class="e"><a>Home</a></li>
+             <li class="e"><a>Now Screening</a></li>
+	        <li class="e"><a>Buy Now</a></li>
+	         <li class="e"><a>Quiz</a></li>
+             <li class="e"><a>About</a></li>
+            
+           </ul>
+         </nav>
+         </div>
+        
+        
+              
+        <br/> <br/>
+        <div id="trygrid">
+          <section class="sect">
+              <div class="par"><h1>Now Screening</h1></div>
+             <img src="first12.jpg" id="changeimg" onLoad="change()"  height="500px">  
+              
+            </section>   
+            <div class="par" id="par2"><h1>Review</h1></div>
+          <form id="form" onsubmit="validate()">
+              <p id="ptwo">Review</p>
+              <input id="name" type="text" placeholder="Name">
+               
+              <input type="email" placeholder="e-mail" id="email"/>
+             
+              <textarea id="textarea" placeholder="Comment"></textarea>
+             
+              <p id="pone">Rate</p>
+                 
+                <div id="inrate">
+                 <div class="rat" id="rate_1" onclick="f(1)"></div>
+                 <div class="rat" id="rate_2" onclick="f(2)"></div> 
+                 <div class="rat"id="rate_3" onclick="f(3)"></div>
+                  <div class="rat"id="rate_4" onclick="f(4)"></div>
+                  <div class="rat" id="rate_5" onclick="f(5)"></div>
+                  </div>
+                 
+              <input id="subin" type="submit" value="Submit!"/>
+               </form>
+            
+        </div>
+        
+        
+        
+         <div id="topNav"><a href="#top">go to top | </a>
+            <a href="amjadcv.html" target="_blank">&nbsp;Editor |</a>
+            <a href="SiteMsap.html" target="_blank">&nbsp;SiteMap</a>
+        </div>
+    </div>
+</body>
+</html>
